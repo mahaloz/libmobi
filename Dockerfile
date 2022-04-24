@@ -16,6 +16,6 @@ RUN make -j3
 RUN make install
 
 ENV LD_LIBRARY_PATH=/usr/local/lib
-RUN cp /libmobi/tools/.libs/mobidrm /fuzz
-#RUN ln -s /libmobi/tools/mobidrm /fuzz
+#RUN cp /libmobi/tools/.libs/mobidrm /fuzz
+RUN ln -s /libmobi/tools/.libs/mobidrm /fuzz
 WORKDIR /
