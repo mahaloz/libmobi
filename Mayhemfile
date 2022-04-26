@@ -6,4 +6,4 @@ target: libmobi
 
 # List of commands used to test the target
 cmds:
-    - cmd: /fuzz -d @@
+    - cmd: /mobidrm -d @@
