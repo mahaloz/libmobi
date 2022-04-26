@@ -14,9 +14,8 @@ RUN ./autogen.sh
 RUN CC=clang CXX=clang++ ./configure
 RUN make -j3
 RUN make install
-RUN clang -fsanitize=address fuzz.c -o fuzz -lmobi
 
 ENV LD_LIBRARY_PATH=/usr/local/lib
-RUN ln -s /libmobi/tools/mobidrm /mobidrm
+RUN ln -s /libmobi/tools/.libs/mobidrm /fuzz_mobidrm_parse
 WORKDIR /
 # 
